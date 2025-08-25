@@ -1,0 +1,4 @@
+venv/
+dataset/imagenes/*
+dataset/dataset.pickle
+modelo/modelo.p
