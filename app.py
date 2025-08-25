@@ -16,7 +16,7 @@ try:
 
     hands = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3)
 
-    labels_dict = {0: "Hola", 1: "Si", 2: "Te quiero"}
+    labels_dict = {0: "A", 1: "B", 2: "Hola", 3: "Bien", 4: "Mal", 5: "Te quiero"}
 
     while True:
         data_aux = []

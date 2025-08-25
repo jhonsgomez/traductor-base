@@ -5,8 +5,8 @@ DATA_DIR = "./dataset/imagenes"
 if not os.path.exists(DATA_DIR):
     os.makedirs(DATA_DIR)
 
-number_of_classes = 3
-dataset_size = 100
+number_of_classes = 6
+dataset_size = 200
 
 mensaje = '!Listo! - Presiona "Q" para continuar'
 posicion = (10, 25)
@@ -26,6 +26,7 @@ for j in range(number_of_classes):
     done = False
     while True:
         ret, frame = cap.read()
+        frame = cv2.flip(frame, 1)
         cv2.putText(
             frame, mensaje, posicion, fuente, tamaño_fuente, color_texto, grosor, linea
         )
@@ -36,6 +37,7 @@ for j in range(number_of_classes):
     counter = 0
     while counter < dataset_size:
         ret, frame = cap.read()
+        frame = cv2.flip(frame, 1)
         cv2.imshow("Traductor | Recolectando imagenes", frame)
         cv2.waitKey(25)
         cv2.imwrite(os.path.join(DATA_DIR, str(j), "{}.jpg".format(counter)), frame)
