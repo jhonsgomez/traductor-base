@@ -1,6 +1,7 @@
 venv/
 
-/dataset/*
+/dataset/dataset.pickle
+/dataset/imagenes/*
 !/dataset/imagenes/.gitkeep
 !/dataset/.gitkeep
 
