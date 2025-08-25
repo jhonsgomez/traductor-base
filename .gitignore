@@ -1,4 +1,8 @@
 venv/
-dataset/imagenes/*
-dataset/dataset.pickle
-modelo/modelo.p
+
+/dataset/*
+!/dataset/imagenes/.gitkeep
+!/dataset/.gitkeep
+
+/modelo/*
+!/modelo/.gitkeep
